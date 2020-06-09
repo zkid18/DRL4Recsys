@@ -47,13 +47,13 @@ Courses on Deep Reinforcement Learning (DRL) and DRL papers for recommender syst
 1. **End-to-End Deep Reinforcement Learning based Recommendation with Supervised Embedding**. Feng Liu, Huifeng Guo, Xutao Li, Ruiming Tang, Yunming Ye, Xiuqiang He. WSDM 2020. [paper](https://dl.acm.org/doi/abs/10.1145/3336191.3371858)
 1. **Reinforced Negative Sampling over Knowledge Graph for Recommendation**. Xiang Wang, Yaokun Xu, Xiangnan He, Yixin Cao, Meng Wang, Tat-Seng Chua. WWW 2020. [paper](https://arxiv.org/pdf/2003.05753.pdf)
 1. **Deep Reinforcement Learning for List-wise Recommendations** Xiangyu Zhao, Liang Zhang, Long Xia, Zhuoye Ding, Dawei Yin, Jiliang Tang
-Utilized Actor-critic framework to work with the incresing number of items for recommendations. 
-Proposed an online environment simulator to pre-train parameters offline and evaluate the model before applying. 
-Recommender agent interacts with the environment (users) choosing items over a sequence of steps.
-State space - browsing history of user, i.e. the previous N items that a user browsed before
-Action - recommend a list of items to a user at time t based on the current state.
-Reward - clicks, orders. 
-Transition probability - Probability of state transition from $s_t$ to $s_{t+1}$ 
+Utilized the Actor-critic framework to work with the increasing number of items for recommendations. 
+- Proposed an online environment simulator to pre-train parameters offline and evaluate the model before applying. 
+- Recommender agent interacts with the environment (users) choosing items over a sequence of steps.
+- State-space - browsing history of the user, i.e., the previous N items that a user browsed before
+- Action - recommend a list of items to a user at time t based on the current state.
+- Reward - clicks, orders. 
+- Transition probability - Probability of state transition from <img src="https://render.githubusercontent.com/render/math?math=s_t to s{t_1}">
 
 ### Preprint Papers
 1. **Reinforcement Learning based Recommender System using Biclustering Technique**. Sungwoon Choi, Heonseok Ha, Uiwon Hwang, Chanju Kim, Jung-Woo Ha, Sungroh Yoon. arxiv 2018. [paper](https://arxiv.org/pdf/1801.05532.pdf) 
