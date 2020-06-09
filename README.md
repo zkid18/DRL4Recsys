@@ -50,10 +50,15 @@ Courses on Deep Reinforcement Learning (DRL) and DRL papers for recommender syst
 Utilized the Actor-critic framework to work with the increasing number of items for recommendations. 
 - Proposed an online environment simulator to pre-train parameters offline and evaluate the model before applying. 
 - Recommender agent interacts with the environment (users) choosing items over a sequence of steps.
-- State-space - browsing history of the user, i.e., the previous N items that a user browsed before
+- State-space - browsing history of the user, i.e., the previous N items that a user browsed before. Users browsing history stored in a memory M. However a better way is to consider only N previous clicked/ordered items. The positive items represent key information about user's preference. 
 - Action - recommend a list of items to a user at time t based on the current state.
 - Reward - clicks, orders. 
 - Transition probability - Probability of state transition from <img src="https://render.githubusercontent.com/render/math?math=s_{t+1}">
+- Each time observe a K items in temporal order.
+- Utilized DDPG algorithm with experienced decay to train the parameters of the framework.
+- MAP and NDCG to evaluate performance.
+- No code
+- Private dataset
 
 ### Preprint Papers
 1. **Reinforcement Learning based Recommender System using Biclustering Technique**. Sungwoon Choi, Heonseok Ha, Uiwon Hwang, Chanju Kim, Jung-Woo Ha, Sungroh Yoon. arxiv 2018. [paper](https://arxiv.org/pdf/1801.05532.pdf) 
