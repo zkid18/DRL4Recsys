@@ -53,7 +53,7 @@ Utilized the Actor-critic framework to work with the increasing number of items 
 - State-space - browsing history of the user, i.e., the previous N items that a user browsed before
 - Action - recommend a list of items to a user at time t based on the current state.
 - Reward - clicks, orders. 
-- Transition probability - Probability of state transition from <img src="https://render.githubusercontent.com/render/math?math=s_t to s{t_1}">
+- Transition probability - Probability of state transition from <img src="https://render.githubusercontent.com/render/math?math=s_t %20to%20 s{t+1}">
 
 ### Preprint Papers
 1. **Reinforcement Learning based Recommender System using Biclustering Technique**. Sungwoon Choi, Heonseok Ha, Uiwon Hwang, Chanju Kim, Jung-Woo Ha, Sungroh Yoon. arxiv 2018. [paper](https://arxiv.org/pdf/1801.05532.pdf) 
