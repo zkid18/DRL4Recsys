@@ -45,14 +45,15 @@ Courses on Deep Reinforcement Learning (DRL) and DRL papers for recommender syst
 1. **DRCGR: Deep reinforcement learning framework incorporating CNN and GAN-based for interactive recommendation**. Rong Gao, Haifeng Xia, Jing Li, Donghua Liu, Shuai Chen, and Gang Chun. ICDM 2019. [paper](https://ieeexplore.ieee.org/document/8970700)
 1. **Pseudo Dyna-Q: A Reinforcement Learning Framework for Interactive Recommendation**. Lixin Zou, Long Xia, Pan Du, Zhuo Zhang, Ting Bai, Weidong Liu, Jian-Yun Nie, Dawei Yin. WSDM 2020. [paper](https://tbbaby.github.io/pub/wsdm20.pdf)
 1. **End-to-End Deep Reinforcement Learning based Recommendation with Supervised Embedding**. Feng Liu, Huifeng Guo, Xutao Li, Ruiming Tang, Yunming Ye, Xiuqiang He. WSDM 2020. [paper](https://dl.acm.org/doi/abs/10.1145/3336191.3371858)
+
 1. **Reinforced Negative Sampling over Knowledge Graph for Recommendation**. Xiang Wang, Yaokun Xu, Xiangnan He, Yixin Cao, Meng Wang, Tat-Seng Chua. WWW 2020. [paper](https://arxiv.org/pdf/2003.05753.pdf)
-1. **Deep Reinforcement Learning for List-wise Recommendations** Xiangyu Zhao, Liang Zhang, Long Xia, Zhuoye Ding, Dawei Yin, Jiliang Tang, 2017 [paper](arxiv.org/abs/1801.00209)
 
-Utilized the Actor-critic framework to work with the increasing number of items for recommendations.
+#### **Deep Reinforcement Learning for List-wise Recommendations** Xiangyu Zhao, Liang Zhang, Long Xia, Zhuoye Ding, Dawei Yin, Jiliang Tang, 2017 [paper](arxiv.org/abs/1801.00209)
 
+- Utilized the Actor-critic framework to work with the increasing number of items for recommendations.
 - Proposed an online environment simulator to pre-train parameters offline and evaluate the model before applying.
 - Recommender agent interacts with the environment (users) choosing items over a sequence of steps.
-- State - browsing history of the user, i.e., the previous N items that a user browsed before. Users browsing history stored in a memory M. However a better way is to consider only N previous clicked/ordered items. The positive items represent key information about user's preference. 
+- State - browsing history of the user, i.e., the previous N items that a user browsed before. Users browsing history stored in a memory M. However a better way is to consider only N previous clicked/ordered items. The positive items represent key information about user's preference.
 - Action - a list of items recomended to a user at time t based on the current state.
 - Reward - clicks, orders.
 - Transition probability - Probability of state transition from <img src="https://render.githubusercontent.com/render/math?math=s_t"> to <img src="https://render.githubusercontent.com/render/math?math=s_{t+1}">
@@ -63,9 +64,9 @@ Utilized the Actor-critic framework to work with the increasing number of items 
 - No code
 - Private dataset
 
-1. **Deep Reinforcement Learning based Recommendation with Explicit User-Item Interactions Modeling** Feng Liu, Ruiming Tangy, Xutao Li, Weinan ZhangzYunming Ye, Haokun Chenz, Huifeng Guoyand Yuzhou Zhangy, 2019 [paper] (arxiv.org/abs/1810.12027)
+#### **Deep Reinforcement Learning based Recommendation with Explicit User-Item Interactions Modeling** Feng Liu, Ruiming Tangy, Xutao Li, Weinan ZhangzYunming Ye, Haokun Chenz, Huifeng Guoyand Yuzhou Zhangy, 2019 [paper] (arxiv.org/abs/1810.12027)
 
-The DRR framework treats recommendations as a sequential decision making procedure and adopts "Actor-critic" reinforcement-learning scheme to model interactions between the user and recommender items. The framework treats recommendations as a sequential decision-making process, which consider both immediate and long-term reward.
+- The DRR framework treats recommendations as a sequential decision making procedure and adopts "Actor-critic" reinforcement-learning scheme to model interactions between the user and recommender items. The framework treats recommendations as a sequential decision-making process, which consider both immediate and long-term reward.
 
 - State - User's positive interaction history with recommender as well as her demographic situation.
 - Actions - continuous parameter vector a. Each item has a ranking score, which is defined as the inner product of the action and the item embedding.
@@ -73,7 +74,7 @@ The DRR framework treats recommendations as a sequential decision making procedu
 - Reward - Clicks, rates, etc
 - Discount rate - the trade-off between immediate reward and long-term reward
 
-<img src ="https://yadi.sk/i/oXRctk01h1rV_Q">
+<img src ="https://downloader.disk.yandex.ru/preview/92fde2d3e824135f7b4ff8d4ea58ce2c8a55693d9eaefa1b545d99766f88c1ac/5ee11b8a/jaSGbAGB_sAhcf-iqjgWCQG65QExL54-YwANAlnW8DcHq6t70jxOa5P3OsnDPK7m8M1BWGprRgC6nXUbAt-2Zg==?uid=0&filename=2020-06-10_15-53-43.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&tknv=v2&owner_uid=153595984&size=2048x2048">
 
 - Developed three state-representation models:
   - DRR-p Utilize the product operator to capture the pairwise local dependencies between items. Compute pairwise interactions between items by using the element-wise product operations.
