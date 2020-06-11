@@ -29,7 +29,20 @@ Courses on Deep Reinforcement Learning (DRL) and DRL papers for recommender syst
 1. **Stabilizing Reinforcement Learning in Dynamic Environment with Application to Online Recommendation**. Shi-Yong Chen, Yang Yu, Qing Da, Jun Tan, Hai-Kuan Huang, Hai-Hong Tang. KDD 2018. [paper](http://lamda.nju.edu.cn/yuy/GetFile.aspx?File=papers/kdd18-RobustDQN.pdf)
 1. **Reinforcement Learning to Rank in E-Commerce Search Engine: Formalization, Analysis, and Application**. Yujing Hu, Qing Da, Anxiang Zeng, Yang Yu, Yinghui Xu. KDD 2018. [paper](https://arxiv.org/pdf/1803.00710.pdf)
 1. **A Reinforcement Learning Framework for Explainable Recommendation**. Xiting Wang, Yiru Chen, Jie Yang, Le Wu, Zhengtao Wu, Xing Xie. ICDM 2018. [paper](https://www.microsoft.com/en-us/research/uploads/prod/2018/08/main.pdf)
-1. **Top-K Off-Policy Correction for a REINFORCE Recommender System**. Minmin Chen, Alex Beutel, Paul Covington, Sagar Jain, Francois Belletti, Ed H. Chi. WSDM 2019. [paper](https://arxiv.org/pdf/1812.02353.pdf)
+## **Top-K Off-Policy Correction for a REINFORCE Recommender System**. Minmin Chen, Alex Beutel, Paul Covington, Sagar Jain, Francois Belletti, Ed H. Chi. WSDM 2019. [paper](https://arxiv.org/pdf/1812.02353.pdf)
+
+- Leverage on a policy-based algorithm, REINFORCE.
+- Live experiment on Youtube data.
+- State: user interest, context
+- Action: items available for recommendations. Constrain by sampling each item according to the softmax policy.
+- Reward: clicks, watch time. As the recommender system lists the page of k-items to a user in time, the expected reward of a set equal to the sum of an expected reward of each item in the set.
+- Discount rate - the trade-off between an immediate reward and long-term reward
+- Rely on the logged feedback of auctions chosen by a historical policy (or a mixture of policies) as it's not possible to perform online updates of the policy.
+- Model state transition with a recurrent neural network (tested LSTM, GRU, Chaos Free RNN) <img src="https://render.githubusercontent.com/render/math?math=s_{t+1} = f(s_t, u_{a_t})"> 
+- Used main and behavioral policy
+- The epsilon-greedy policy is not acceptable for Youtube as it causes inappropriate recommendations and bad user experience. Employ Boltzman exploration.
+- On an online experiment, the reward is aggregated on a time horizon of 4-10 hours.
+
 1. **Generative Adversarial User Model for Reinforcement Learning Based Recommendation System**. Xinshi Chen, Shuang Li, Hui Li, Shaohua Jiang, Yuan Qi, Le Song. ICML 2019. [paper](http://proceedings.mlr.press/v97/chen19f/chen19f.pdf)
 1. **Aggregating E-commerce Search Results from Heterogeneous Sources via Hierarchical Reinforcement Learning**. Ryuichi Takanobu, Tao Zhuang, Minlie Huang, Jun Feng, Haihong Tang, Bo Zheng. WWW 2019. [paper](https://arxiv.org/pdf/1902.08882.pdf)
 1. **Policy Gradients for Contextual Recommendations**. Feiyang Pan, Qingpeng Cai, Pingzhong Tang, Fuzhen Zhuang, Qing He. WWW 2019. [paper](https://arxiv.org/pdf/1802.04162.pdf)
