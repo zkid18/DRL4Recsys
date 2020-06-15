@@ -28,20 +28,28 @@ Courses on Deep Reinforcement Learning (DRL) and DRL papers for recommender syst
 1. **Recommendations with Negative Feedback via Pairwise Deep Reinforcement Learning**. Xiangyu Zhao, Liang Zhang, Zhuoye Ding, Long Xia, Jiliang Tang, Dawei Yin. KDD 2018. [paper](https://arxiv.org/pdf/1802.06501.pdf)
 1. **Stabilizing Reinforcement Learning in Dynamic Environment with Application to Online Recommendation**. Shi-Yong Chen, Yang Yu, Qing Da, Jun Tan, Hai-Kuan Huang, Hai-Hong Tang. KDD 2018. [paper](http://lamda.nju.edu.cn/yuy/GetFile.aspx?File=papers/kdd18-RobustDQN.pdf)
 1. **Reinforcement Learning to Rank in E-Commerce Search Engine: Formalization, Analysis, and Application**. Yujing Hu, Qing Da, Anxiang Zeng, Yang Yu, Yinghui Xu. KDD 2018. [paper](https://arxiv.org/pdf/1803.00710.pdf)
-1. **A Reinforcement Learning Framework for Explainable Recommendation**. Xiting Wang, Yiru Chen, Jie Yang, Le Wu, Zhengtao Wu, Xing Xie. ICDM 2018. [paper](https://www.microsoft.com/en-us/research/uploads/prod/2018/08/main.pdf)
+1. **A Reinforcement Learning Framework for Explainable Recommendation**. Xiting Wang, Yiru Chen, Jie Yang, Le Wu, Zhengtao Wu, Xing Xie. ICDM 2018. [paper](https://www.microsoft.com/en-us/research/uploads/prod/2018/08/main.pdf) [video] (https://youtu.be/Ys3YY7sSmIA)
 ## **Top-K Off-Policy Correction for a REINFORCE Recommender System**. Minmin Chen, Alex Beutel, Paul Covington, Sagar Jain, Francois Belletti, Ed H. Chi. WSDM 2019. [paper](https://arxiv.org/pdf/1812.02353.pdf)
 
 - Leverage on a policy-based algorithm, REINFORCE.
 - Live experiment on Youtube data.
-- State: user interest, context
-- Action: items available for recommendations. Constrain by sampling each item according to the softmax policy.
-- Reward: clicks, watch time. As the recommender system lists the page of k-items to a user in time, the expected reward of a set equal to the sum of an expected reward of each item in the set.
+- State - user interest, context
+- Action - items available for recommendations. Constrain by sampling each item according to the softmax policy.
+- Reward - clicks, watch time. As the recommender system lists the page of k-items to a user in time, the expected reward of a set equal to the sum of an expected reward of each item in the set.
 - Discount rate - the trade-off between an immediate reward and long-term reward
 - Rely on the logged feedback of auctions chosen by a historical policy (or a mixture of policies) as it's not possible to perform online updates of the policy.
 - Model state transition with a recurrent neural network (tested LSTM, GRU, Chaos Free RNN) <img src="https://render.githubusercontent.com/render/math?math=s_{t+1} = f(s_t, u_{a_t})"> 
-- Used main and behavioral policy
+- Feedback is biased by previous recommender. Policy not update frequently that also cause bias. Feedback could come from other agents in production.
+- Agent is refreshed every 5 days
+- Used target (on-policy) and behavioral policy (off-policy) to downweitgth non-target policies.
 - The epsilon-greedy policy is not acceptable for Youtube as it causes inappropriate recommendations and bad user experience. Employ Boltzman exploration.
+- Target policy is trained with weighted softmax to max long term reward.
+- Behavior policy trained using state/action pairs from logged behavior/feedback.
 - On an online experiment, the reward is aggregated on a time horizon of 4-10 hours.
+- Parameters and architecture are primarily shared.
+- RNN is used to represent the user state
+
+<img src="https://downloader.disk.yandex.ru/preview/22daefae8c5ed9562f4475cf912f04a4a159186817d16ded9a0cd9468fc09260/5ee7c51a/TtsyxSltVNju8A7KWlHJ5z545oH_qMb8XPA3c4eymNiKO07bFZRoVmtJIu4se6Ke9cbwtyaNkusC35oyuBiv1A==?uid=0&filename=2020-06-15_17-59-44.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&tknv=v2&owner_uid=153595984&size=2048x2048">
 
 1. **Generative Adversarial User Model for Reinforcement Learning Based Recommendation System**. Xinshi Chen, Shuang Li, Hui Li, Shaohua Jiang, Yuan Qi, Le Song. ICML 2019. [paper](http://proceedings.mlr.press/v97/chen19f/chen19f.pdf)
 1. **Aggregating E-commerce Search Results from Heterogeneous Sources via Hierarchical Reinforcement Learning**. Ryuichi Takanobu, Tao Zhuang, Minlie Huang, Jun Feng, Haihong Tang, Bo Zheng. WWW 2019. [paper](https://arxiv.org/pdf/1902.08882.pdf)
