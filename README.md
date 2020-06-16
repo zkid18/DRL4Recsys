@@ -60,15 +60,15 @@ Courses on Deep Reinforcement Learning (DRL) and DRL papers for recommender syst
 1. **Reinforcement Knowledge Graph Reasoning for Explainable Recommendation**. Yikun Xian, Zuohui Fu, S. Muthukrishnan, Gerard de Melo, Yongfeng Zhang. SIGIR 2019. [paper](http://yongfeng.me/attach/xian-sigir2019.pdf)
 
 #### **Reinforcement Learning to Optimize Long-term User Engagement in Recommender Systems**. Lixin Zou, Long Xia, Zhuoye Ding, Jiaxing Song, Weidong Liu, Dawei Yin. KDD 2019. [paper](https://arxiv.org/pdf/1902.05570.pdf)
-- Introduced a RL framework - FeedRec to optimize long-term user engagement. Based on Q-network which designed in heirarical LSTM and S-network, that simulates the environment 
-- S-network assists Q-Network and voids the instability of convergence in policy learning. Specifically in each round of recommendations, alligning with the user feedback, S-network genearate user's response, the dweel time, the revisited time and flag that indicates that user will leave or not the platform.
+- Introduced an RL framework - FeedRec to optimize long-term user engagement. Based on Q-network which designed in hierarchical LSTM and S-network, that simulates the environment 
+- S-network assists Q-Network and voids the instability of convergence in policy learning. Specifically, in each round of recommendations, aligning with the user feedback, S-network generates the user's response, the dwell time, the revisited time, and flag that indicates that the user will leave or not the platform.
 - The model versatile both instant (cliks, likes, ctr) and delayed (dweel time, revisit and etc)
 - Trained on internal e-commerce dataset with pre-trained embeddings, which is learned through modeling user's cliking streams with skip-gram.
 - State - the user's browsing history
 - Action - the finite space of items
 - Transition - probability of seeing state <img src="https://render.githubusercontent.com/render/math?math=s_{t+1}"> after taking action <img src="https://render.githubusercontent.com/render/math?math=i_t"> at  <img src="https://render.githubusercontent.com/render/math?math=s_t"> 
-- Reward as a weighted sum of different metrics. Give some instantiations of reward function both instant and delyaed metrics.
-- The major user bevahiors, such as clicks, spip, purchase are tracked separately with different LSTM pipelines as where different user's behavior are captured by the corresponding LSTM-layer to avoid intensive behavior dominance and capture specific characteristics.
+- Reward as a weighted sum of different metrics. Give some instantiations of reward function, both instant and delayed metrics.
+- The primary user behaviors, such as clicks, skip, the purchase is tracked separately with different LSTM pipelines as where different user's behavior is captured by the corresponding LSTM-layer to avoid intensive behavior dominance and capture specific characteristics.
 
 1. **Environment reconstruction with hidden confounders for reinforcement learning based recommendation**. Wenjie Shang, Yang Yu, Qingyang Li, Zhiwei Qin, Yiping Meng, Jieping Ye. KDD 2019. [paper](http://lamda.nju.edu.cn/yuy/GetFile.aspx?File=papers/kdd19-confounder.pdf)
 1. **Exact-K Recommendation via Maximal Clique Optimization**. Yu Gong, Yu Zhu, Lu Duan, Qingwen Liu, Ziyu Guan, Fei Sun, Wenwu Ou, Kenny Q. Zhu. KDD 2019. [paper](https://arxiv.org/pdf/1905.07089.pdf)
