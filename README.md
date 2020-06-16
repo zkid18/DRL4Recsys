@@ -52,7 +52,7 @@ Courses on Deep Reinforcement Learning (DRL) and DRL papers for recommender syst
 - Private dataset
 - Code reproduction by Bayes group [code] (https://github.com/awarebayes/RecNN)
 
-<img src="https://downloader.disk.yandex.ru/preview/22daefae8c5ed9562f4475cf912f04a4a159186817d16ded9a0cd9468fc09260/5ee7c51a/TtsyxSltVNju8A7KWlHJ5z545oH_qMb8XPA3c4eymNiKO07bFZRoVmtJIu4se6Ke9cbwtyaNkusC35oyuBiv1A==?uid=0&filename=2020-06-15_17-59-44.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&tknv=v2&owner_uid=153595984&size=2048x2048">
+<img src="https://user-images.githubusercontent.com/8243154/84734543-d4a2e300-afa9-11ea-9263-16e2cef1d9f8.png">
 
 1. **Generative Adversarial User Model for Reinforcement Learning Based Recommendation System**. Xinshi Chen, Shuang Li, Hui Li, Shaohua Jiang, Yuan Qi, Le Song. ICML 2019. [paper](http://proceedings.mlr.press/v97/chen19f/chen19f.pdf)
 1. **Aggregating E-commerce Search Results from Heterogeneous Sources via Hierarchical Reinforcement Learning**. Ryuichi Takanobu, Tao Zhuang, Minlie Huang, Jun Feng, Haihong Tang, Bo Zheng. WWW 2019. [paper](https://arxiv.org/pdf/1902.08882.pdf)
@@ -69,6 +69,7 @@ Courses on Deep Reinforcement Learning (DRL) and DRL papers for recommender syst
 - Transition - probability of seeing state <img src="https://render.githubusercontent.com/render/math?math=s_{t+1}"> after taking action <img src="https://render.githubusercontent.com/render/math?math=i_t"> at  <img src="https://render.githubusercontent.com/render/math?math=s_t"> 
 - Reward as a weighted sum of different metrics. Give some instantiations of reward function, both instant and delayed metrics.
 - The primary user behaviors, such as clicks, skip, the purchase is tracked separately with different LSTM pipelines as where different user's behavior is captured by the corresponding LSTM-layer to avoid intensive behavior dominance and capture specific characteristics.
+<img scr="https://user-images.githubusercontent.com/8243154/84734503-b3da8d80-afa9-11ea-80f9-bd57a9afa668.png">
 
 1. **Environment reconstruction with hidden confounders for reinforcement learning based recommendation**. Wenjie Shang, Yang Yu, Qingyang Li, Zhiwei Qin, Yiping Meng, Jieping Ye. KDD 2019. [paper](http://lamda.nju.edu.cn/yuy/GetFile.aspx?File=papers/kdd19-confounder.pdf)
 1. **Exact-K Recommendation via Maximal Clique Optimization**. Yu Gong, Yu Zhu, Lu Duan, Qingwen Liu, Ziyu Guan, Fei Sun, Wenwu Ou, Kenny Q. Zhu. KDD 2019. [paper](https://arxiv.org/pdf/1905.07089.pdf)
@@ -109,7 +110,7 @@ Courses on Deep Reinforcement Learning (DRL) and DRL papers for recommender syst
 - Reward - clicks, rates, etc
 - Discount rate - the trade-off between immediate reward and long-term reward
 
-<img src ="https://downloader.disk.yandex.ru/preview/92fde2d3e824135f7b4ff8d4ea58ce2c8a55693d9eaefa1b545d99766f88c1ac/5ee11b8a/jaSGbAGB_sAhcf-iqjgWCQG65QExL54-YwANAlnW8DcHq6t70jxOa5P3OsnDPK7m8M1BWGprRgC6nXUbAt-2Zg==?uid=0&filename=2020-06-10_15-53-43.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&tknv=v2&owner_uid=153595984&size=2048x2048">
+<img src ="https://user-images.githubusercontent.com/8243154/84734575-edab9400-afa9-11ea-8199-4f4a1b34b7d9.png">
 
 - Developed three state-representation models:
   - DRR-p Utilize the product operator to capture the pairwise local dependencies between items. Compute pairwise interactions between items by using the element-wise product operations.
