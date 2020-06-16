@@ -29,7 +29,8 @@ Courses on Deep Reinforcement Learning (DRL) and DRL papers for recommender syst
 1. **Stabilizing Reinforcement Learning in Dynamic Environment with Application to Online Recommendation**. Shi-Yong Chen, Yang Yu, Qing Da, Jun Tan, Hai-Kuan Huang, Hai-Hong Tang. KDD 2018. [paper](http://lamda.nju.edu.cn/yuy/GetFile.aspx?File=papers/kdd18-RobustDQN.pdf)
 1. **Reinforcement Learning to Rank in E-Commerce Search Engine: Formalization, Analysis, and Application**. Yujing Hu, Qing Da, Anxiang Zeng, Yang Yu, Yinghui Xu. KDD 2018. [paper](https://arxiv.org/pdf/1803.00710.pdf)
 1. **A Reinforcement Learning Framework for Explainable Recommendation**. Xiting Wang, Yiru Chen, Jie Yang, Le Wu, Zhengtao Wu, Xing Xie. ICDM 2018. [paper](https://www.microsoft.com/en-us/research/uploads/prod/2018/08/main.pdf) [video] (https://youtu.be/Ys3YY7sSmIA)
-## **Top-K Off-Policy Correction for a REINFORCE Recommender System**. Minmin Chen, Alex Beutel, Paul Covington, Sagar Jain, Francois Belletti, Ed H. Chi. WSDM 2019. [paper](https://arxiv.org/pdf/1812.02353.pdf)
+
+#### **Top-K Off-Policy Correction for a REINFORCE Recommender System**. Minmin Chen, Alex Beutel, Paul Covington, Sagar Jain, Francois Belletti, Ed H. Chi. WSDM 2019. [paper](https://arxiv.org/pdf/1812.02353.pdf)
 
 - Leverage on a policy-based algorithm, REINFORCE.
 - Live experiment on Youtube data.
@@ -48,6 +49,8 @@ Courses on Deep Reinforcement Learning (DRL) and DRL papers for recommender syst
 - On an online experiment, the reward is aggregated on a time horizon of 4-10 hours.
 - Parameters and architecture are primarily shared.
 - RNN is used to represent the user state
+- Private dataset
+- Code reproduction by Bayes group [code] (https://github.com/awarebayes/RecNN)
 
 <img src="https://downloader.disk.yandex.ru/preview/22daefae8c5ed9562f4475cf912f04a4a159186817d16ded9a0cd9468fc09260/5ee7c51a/TtsyxSltVNju8A7KWlHJ5z545oH_qMb8XPA3c4eymNiKO07bFZRoVmtJIu4se6Ke9cbwtyaNkusC35oyuBiv1A==?uid=0&filename=2020-06-15_17-59-44.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&tknv=v2&owner_uid=153595984&size=2048x2048">
 
@@ -55,7 +58,18 @@ Courses on Deep Reinforcement Learning (DRL) and DRL papers for recommender syst
 1. **Aggregating E-commerce Search Results from Heterogeneous Sources via Hierarchical Reinforcement Learning**. Ryuichi Takanobu, Tao Zhuang, Minlie Huang, Jun Feng, Haihong Tang, Bo Zheng. WWW 2019. [paper](https://arxiv.org/pdf/1902.08882.pdf)
 1. **Policy Gradients for Contextual Recommendations**. Feiyang Pan, Qingpeng Cai, Pingzhong Tang, Fuzhen Zhuang, Qing He. WWW 2019. [paper](https://arxiv.org/pdf/1802.04162.pdf)
 1. **Reinforcement Knowledge Graph Reasoning for Explainable Recommendation**. Yikun Xian, Zuohui Fu, S. Muthukrishnan, Gerard de Melo, Yongfeng Zhang. SIGIR 2019. [paper](http://yongfeng.me/attach/xian-sigir2019.pdf)
-1. **Reinforcement Learning to Optimize Long-term User Engagement in Recommender Systems**. Lixin Zou, Long Xia, Zhuoye Ding, Jiaxing Song, Weidong Liu, Dawei Yin. KDD 2019. [paper](https://arxiv.org/pdf/1902.05570.pdf)
+
+#### **Reinforcement Learning to Optimize Long-term User Engagement in Recommender Systems**. Lixin Zou, Long Xia, Zhuoye Ding, Jiaxing Song, Weidong Liu, Dawei Yin. KDD 2019. [paper](https://arxiv.org/pdf/1902.05570.pdf)
+- Introduced a RL framework - FeedRec to optimize long-term user engagement. Based on Q-network which designed in heirarical LSTM and S-network, that simulates the environment 
+- S-network assists Q-Network and voids the instability of convergence in policy learning. Specifically in each round of recommendations, alligning with the user feedback, S-network genearate user's response, the dweel time, the revisited time and flag that indicates that user will leave or not the platform.
+- The model versatile both instant (cliks, likes, ctr) and delayed (dweel time, revisit and etc)
+- Trained on internal e-commerce dataset with pre-trained embeddings, which is learned through modeling user's cliking streams with skip-gram.
+- State - the user's browsing history
+- Action - the finite space of items
+- Transition - probability of seeing state <img src="https://render.githubusercontent.com/render/math?math=s_{t+1}"> after taking action <img src="https://render.githubusercontent.com/render/math?math=i_t"> at  <img src="https://render.githubusercontent.com/render/math?math=s_t"> 
+- Reward as a weighted sum of different metrics. Give some instantiations of reward function both instant and delyaed metrics.
+- The major user bevahiors, such as clicks, spip, purchase are tracked separately with different LSTM pipelines as where different user's behavior are captured by the corresponding LSTM-layer to avoid intensive behavior dominance and capture specific characteristics.
+
 1. **Environment reconstruction with hidden confounders for reinforcement learning based recommendation**. Wenjie Shang, Yang Yu, Qingyang Li, Zhiwei Qin, Yiping Meng, Jieping Ye. KDD 2019. [paper](http://lamda.nju.edu.cn/yuy/GetFile.aspx?File=papers/kdd19-confounder.pdf)
 1. **Exact-K Recommendation via Maximal Clique Optimization**. Yu Gong, Yu Zhu, Lu Duan, Qingwen Liu, Ziyu Guan, Fei Sun, Wenwu Ou, Kenny Q. Zhu. KDD 2019. [paper](https://arxiv.org/pdf/1905.07089.pdf)
 1. **Hierarchical Reinforcement Learning for Course Recommendation in MOOCs**. Jing Zhang, Bowen Hao, Bo Chen, Cuiping Li, Hong Chen, Jimeng Sun. AAAI 2019. [paper](https://xiaojingzi.github.io/publications/AAAI19-zhang-et-al-HRL.pdf)
@@ -110,4 +124,3 @@ Courses on Deep Reinforcement Learning (DRL) and DRL papers for recommender syst
 1. **Reinforcement Learning based Recommender System using Biclustering Technique**. Sungwoon Choi, Heonseok Ha, Uiwon Hwang, Chanju Kim, Jung-Woo Ha, Sungroh Yoon. arxiv 2018. [paper](https://arxiv.org/pdf/1801.05532.pdf) 
 1. **Deep Reinforcement Learning based Recommendation with Explicit User-Item Interactions Modeling**. Feng Liu, Ruiming Tang, Xutao Li, Weinan Zhang, Yunming Ye, Haokun Chen, Huifeng Guo, Yuzhou Zhang. arxiv 2018. [paper](https://arxiv.org/pdf/1810.12027.pdf)
 1. **Model-Based Reinforcement Learning for Whole-Chain Recommendations**. Xiangyu Zhao, Long Xia, Yihong Zhao, Dawei Yin, Jiliang Tang. arxiv 2019. [paper](https://arxiv.org/pdf/1902.03987.pdf)
-
