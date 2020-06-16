@@ -69,7 +69,7 @@ Courses on Deep Reinforcement Learning (DRL) and DRL papers for recommender syst
 - Transition - probability of seeing state <img src="https://render.githubusercontent.com/render/math?math=s_{t+1}"> after taking action <img src="https://render.githubusercontent.com/render/math?math=i_t"> at  <img src="https://render.githubusercontent.com/render/math?math=s_t"> 
 - Reward as a weighted sum of different metrics. Give some instantiations of reward function, both instant and delayed metrics.
 - The primary user behaviors, such as clicks, skip, the purchase is tracked separately with different LSTM pipelines as where different user's behavior is captured by the corresponding LSTM-layer to avoid intensive behavior dominance and capture specific characteristics.
-<img scr="https://user-images.githubusercontent.com/8243154/84734503-b3da8d80-afa9-11ea-80f9-bd57a9afa668.png">
+<img src="https://user-images.githubusercontent.com/8243154/84734503-b3da8d80-afa9-11ea-80f9-bd57a9afa668.png">
 
 1. **Environment reconstruction with hidden confounders for reinforcement learning based recommendation**. Wenjie Shang, Yang Yu, Qingyang Li, Zhiwei Qin, Yiping Meng, Jieping Ye. KDD 2019. [paper](http://lamda.nju.edu.cn/yuy/GetFile.aspx?File=papers/kdd19-confounder.pdf)
 1. **Exact-K Recommendation via Maximal Clique Optimization**. Yu Gong, Yu Zhu, Lu Duan, Qingwen Liu, Ziyu Guan, Fei Sun, Wenwu Ou, Kenny Q. Zhu. KDD 2019. [paper](https://arxiv.org/pdf/1905.07089.pdf)
