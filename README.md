@@ -81,7 +81,6 @@ Courses on Deep Reinforcement Learning (DRL) and DRL papers for recommender syst
 1. **DRCGR: Deep reinforcement learning framework incorporating CNN and GAN-based for interactive recommendation**. Rong Gao, Haifeng Xia, Jing Li, Donghua Liu, Shuai Chen, and Gang Chun. ICDM 2019. [paper](https://ieeexplore.ieee.org/document/8970700)
 1. **Pseudo Dyna-Q: A Reinforcement Learning Framework for Interactive Recommendation**. Lixin Zou, Long Xia, Pan Du, Zhuo Zhang, Ting Bai, Weidong Liu, Jian-Yun Nie, Dawei Yin. WSDM 2020. [paper](https://tbbaby.github.io/pub/wsdm20.pdf)
 1. **End-to-End Deep Reinforcement Learning based Recommendation with Supervised Embedding**. Feng Liu, Huifeng Guo, Xutao Li, Ruiming Tang, Yunming Ye, Xiuqiang He. WSDM 2020. [paper](https://dl.acm.org/doi/abs/10.1145/3336191.3371858)
-
 1. **Reinforced Negative Sampling over Knowledge Graph for Recommendation**. Xiang Wang, Yaokun Xu, Xiangnan He, Yixin Cao, Meng Wang, Tat-Seng Chua. WWW 2020. [paper](https://arxiv.org/pdf/2003.05753.pdf)
 
 #### **Deep Reinforcement Learning for List-wise Recommendations** Xiangyu Zhao, Liang Zhang, Long Xia, Zhuoye Ding, Dawei Yin, Jiliang Tang, 2017 [paper](arxiv.org/abs/1801.00209)
@@ -120,6 +119,25 @@ Courses on Deep Reinforcement Learning (DRL) and DRL papers for recommender syst
 - Epsilon-greedy exploration in the Actor-network.
 - Evaluated on offline datasets (MovieLens, Yahoo! Music, Jester)
 - Online evaluation with environment simulator. Pretrain PMF (probabilistic matrix factorization) model as an environment simulator.
+
+#### **Reinforcement Learning for Slate-based RecommenderSystems: A Tractable Decomposition and Practical Methodology**. Eugene Ie†, Vihan Jain, Jing Wang, Sanmit Narvekar, Ritesh Agarwal1, Rui Wu1, Heng-Tze Cheng1, Morgane Lustman, Vince Gatto3, Paul Covington, Jim McFadden, Tushar Chandra, and Craig Boutilier† [paper] (https://arxiv.org/pdf/1905.12767.pdf) [video] (https://www.youtube.com/watch?v=X3uozqaNCYE)
+
+- Developed a SLATEQ, a decompositio nof value-based temporal-difference and Q-learning that renders RL tractable with slates
+- LTV of a slate can be decomposed into a tractable value function of its component item-wise LTV
+- Introduced a recommender simulation environment, RecSim that allows the straightforward configuration of an itemcollection (or vocabulary), a user (latent) state model and a user choice model.
+- Session optimization
+- State - static users features as demographics, declared intresets, user context, summarizaiton of the previous history
+- Acions - the set of all possible slates.
+- Transition probability
+- Reward - measurement of user engagement. 
+- In the MDP model each user should be viewed as a separate environment or separate MDP. Hence it critical to allow generalization across users, since few if any users generates enough experience to allow reasonable recommendations.
+- Combinatorial optimizaton problem - find the slate with the maximum Q-value. SlateQ allows to decompose into cobination of the item-wise Q-values of the consistent items. Tried top-k, greedy, LP-based methods.
+- Items and user intersts as a topic modeling problem
+- As a choice model, use an exponential cascade model that accounts for document position in the slate. This choice model assumes "attention" is given to one document at a time, with exponentially decreasing attention given to documents as a user moves down the slate.
+- A user choice model impacts which document(if any) from the slate is consumed by the user. Made an assumption that a user can observe any recommender document's topic before selection but can't observe its quality before consumption
+- Users interested in document d defines the relative document appeal to the user and serves the basis of the choice function.
+- Models are trained periodically and pushed to the server. The ranker uses the latest model to recommend items and logs user feedback, which is used to train new models. Using LTV labels, iterative model training, and pushing can be viewed as a form of generalized policy iteration.
+- A candidate generator retrieves a small subset (hundreds) of items from a large corpus that best matches a user context. Therankerscores/ranks are candidates using a DNN with both user context and item features as input. It optimizes a combination of several objectives (e.g., clicks, expected engagement, several other factors).
 
 ### Preprint Papers
 1. **Reinforcement Learning based Recommender System using Biclustering Technique**. Sungwoon Choi, Heonseok Ha, Uiwon Hwang, Chanju Kim, Jung-Woo Ha, Sungroh Yoon. arxiv 2018. [paper](https://arxiv.org/pdf/1801.05532.pdf) 
