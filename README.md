@@ -145,8 +145,8 @@ Courses on Deep Reinforcement Learning (DRL) and DRL papers for recommender syst
 - Models are trained periodically and pushed to the server. The ranker uses the latest model to recommend items and logs user feedback, which is used to train new models. Using LTV labels, iterative model training, and pushing can be viewed as a form of generalized policy iteration.
 - A candidate generator retrieves a small subset (hundreds) of items from a large corpus that best matches a user context. Therankerscores/ranks are candidates using a DNN with both user context and item features as input. It optimizes a combination of several objectives (e.g., clicks, expected engagement, several other factors).
 
-#### **RECSIM : A Configurable Simulation Platform for Recommender Systems, Ie E, Hsu C, Mladenov M, Jain V, Narvekar S, Wang J, Wu R, Boutilier C
-2019** [paper] (https://arxiv.org/pdf/1909.04847.pdf)
+#### **RECSIM : A Configurable Simulation Platform for Recommender Systems** Ie E, Hsu C, Mladenov M, Jain V, Narvekar S, Wang J, Wu R, Boutilier C
+2019 [paper](https://arxiv.org/pdf/1909.04847.pdf)
 - RECSIM is a configurable platform that allows the natural, albeit abstract, specification of an environment in which a recommender interacts with a corpus of documents (or recommendable items) and a set of users, to support the development of recommendation algorithms.
 - The user model samples users from a prior distribution over (configurable) user features: these may include latent features
 such as personality, satisfaction, interests; observable features such as demographics; and behavioral features such as session length, visit frequency, or time budget
