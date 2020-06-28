@@ -126,7 +126,7 @@ Courses on Deep Reinforcement Learning (DRL) and DRL papers for recommender syst
 - Evaluated on offline datasets (MovieLens, Yahoo! Music, Jester)
 - Online evaluation with environment simulator. Pretrain PMF (probabilistic matrix factorization) model as an environment simulator.
 
-#### **Reinforcement Learning for Slate-based RecommenderSystems: A Tractable Decomposition and Practical Methodology**. Eugene Ie†, Vihan Jain, Jing Wang, Sanmit Narvekar, Ritesh Agarwal1, Rui Wu1, Heng-Tze Cheng1, Morgane Lustman, Vince Gatto3, Paul Covington, Jim McFadden, Tushar Chandra, and Craig Boutilier† [paper] (https://arxiv.org/pdf/1905.12767.pdf) [video] (https://www.youtube.com/watch?v=X3uozqaNCYE)
+#### **Reinforcement Learning for Slate-based RecommenderSystems: A Tractable Decomposition and Practical Methodology**. Eugene Ie†, Vihan Jain, Jing Wang, Sanmit Narvekar, Ritesh Agarwal1, Rui Wu1, Heng-Tze Cheng1, Morgane Lustman, Vince Gatto3, Paul Covington, Jim McFadden, Tushar Chandra, and Craig Boutilier [paper](https://arxiv.org/pdf/1905.12767.pdf) [video](https://www.youtube.com/watch?v=X3uozqaNCYE)
 
 - Developed a SLATEQ, a decompositio nof value-based temporal-difference and Q-learning that renders RL tractable with slates
 - LTV of a slate can be decomposed into a tractable value function of its component item-wise LTV
