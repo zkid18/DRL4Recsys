@@ -75,7 +75,13 @@ Courses on Deep Reinforcement Learning (DRL) and DRL papers for recommender syst
 1. **Exact-K Recommendation via Maximal Clique Optimization**. Yu Gong, Yu Zhu, Lu Duan, Qingwen Liu, Ziyu Guan, Fei Sun, Wenwu Ou, Kenny Q. Zhu. KDD 2019. [paper](https://arxiv.org/pdf/1905.07089.pdf)
 1. **Hierarchical Reinforcement Learning for Course Recommendation in MOOCs**. Jing Zhang, Bowen Hao, Bo Chen, Cuiping Li, Hong Chen, Jimeng Sun. AAAI 2019. [paper](https://xiaojingzi.github.io/publications/AAAI19-zhang-et-al-HRL.pdf)
 1. **Large-scale Interactive Recommendation with Tree-structured Policy Gradient**. Haokun Chen, Xinyi Dai, Han Cai, Weinan Zhang, Xuejian Wang, Ruiming Tang, Yuzhou Zhang, Yong Yu. AAAI 2019. [paper](https://arxiv.org/pdf/1811.05869.pdf)
-1. **Virtual-Taobao: Virtualizing real-world online retail environment for reinforcement learning**. Jing-Cheng Shi, Yang Yu, Qing Da, Shi-Yong Chen, An-Xiang Zeng. AAAI 2019. [paper](http://www.lamda.nju.edu.cn/yuy/GetFile.aspx?File=papers/aaai2019-virtualtaobao.pdf)
+#### **Virtual-Taobao: Virtualizing real-world online retail environment for reinforcement learning**. Jing-Cheng Shi, Yang Yu, Qing Da, Shi-Yong Chen, An-Xiang Zeng. AAAI 2019. [paper](http://www.lamda.nju.edu.cn/yuy/GetFile.aspx?File=papers/aaai2019-virtualtaobao.pdf)
+- Instead of training reinforcement learning in Taobao directly, we present our approach: first build Virtual Taobao, a simulator learned from historical customer behavior data through the proposed GAN-SD (GAN for Simulating Distributions) and MAIL (multi-agent adversaria limitation learning), and then we train policies in Virtual Taobao with no physical costs in which ANC (Action Norm Constraint) strategy is proposed to reduce over-fitting.
+- Comparing with the traditional supervised learning approach, the strategy trained in Virtual Taobao achieves more than 2% improvement of revenue in the real environment.
+- Agent - the search engine
+- Environment - the customers
+- Commodity search and shopping process can see as a sequential decision process. Customers decision process for engine and customers. The engine and customers are the environments of each other
+
 1. **A Model-Based Reinforcement Learning with Adversarial Training for Online Recommendation**. Xueying Bai, Jian Guan, Hongning Wang. NeurIPS 2019. [paper](http://papers.nips.cc/paper/9257-a-model-based-reinforcement-learning-with-adversarial-training-for-online-recommendation.pdf)
 1. **Text-Based Interactive Recommendation via Constraint-Augmented Reinforcement Learning**. Ruiyi Zhang, Tong Yu, Yilin Shen, Hongxia Jin, Changyou Chen, Lawrence Carin. NeurIPS 2019. [paper](http://people.ee.duke.edu/~lcarin/Ruiyi_NeurIPS2019.pdf)
 1. **DRCGR: Deep reinforcement learning framework incorporating CNN and GAN-based for interactive recommendation**. Rong Gao, Haifeng Xia, Jing Li, Donghua Liu, Shuai Chen, and Gang Chun. ICDM 2019. [paper](https://ieeexplore.ieee.org/document/8970700)
@@ -138,6 +144,25 @@ Courses on Deep Reinforcement Learning (DRL) and DRL papers for recommender syst
 - Users interested in document d defines the relative document appeal to the user and serves the basis of the choice function.
 - Models are trained periodically and pushed to the server. The ranker uses the latest model to recommend items and logs user feedback, which is used to train new models. Using LTV labels, iterative model training, and pushing can be viewed as a form of generalized policy iteration.
 - A candidate generator retrieves a small subset (hundreds) of items from a large corpus that best matches a user context. Therankerscores/ranks are candidates using a DNN with both user context and item features as input. It optimizes a combination of several objectives (e.g., clicks, expected engagement, several other factors).
+
+#### **RECSIM : A Configurable Simulation Platform for Recommender Systems, Ie E, Hsu C, Mladenov M, Jain V, Narvekar S, Wang J, Wu R, Boutilier C
+2019** [paper] (https://arxiv.org/pdf/1909.04847.pdf)
+- RECSIM is a configurable platform that allows the natural, albeit abstract, specification of an environment in which a recommender interacts with a corpus of documents (or recommendable items) and a set of users, to support the development of recommendation algorithms.
+- The user model samples users from a prior distribution over (configurable) user features: these may include latent features
+such as personality, satisfaction, interests; observable features such as demographics; and behavioral features such as session length, visit frequency, or time budget
+- The document model samples items from a prior over document features, which again may incorporate latent features such as document quality, and observable features such as topic, document length and global statistics (e.g., ratings, popularity)
+- User responce is determined by user choice model. Once the document is consumed the user state undergoes a transition through a cinfigurable (user) transition model
+- The user model assumes that user have a various degrees of interests in topic (with some prior distribution) ranking from -1 to 1.
+<img src = "https://user-images.githubusercontent.com/8243154/85855204-8c13d280-b7be-11ea-8344-e02d2be9d75f.png">
+- RECSIM offers stackable hierarchical agent layers intended to solve a more abstract recommendation problem. A hierarchical agent layer does not materialize a slate of documents (i.e., RS action), but relies on one or more base agents to do so.
+- RECSIM can be viewed as a dynamic Bayesian network that defines a probability distribution over trajectories of slates, choices, and observations.
+- Several baseline agents implemented:
+-- TabularQAgent - Q-learning algorithm. Enumarates all possible slates to maximize over Q values
+-- Full-slateQAgent - deep Q-Network agent by threating each slate as a single action
+-- Random agent - random slates with no duplicates
+- [RECSIM code] (https://github.com/google-research/recsim)
+<img src = "https://user-images.githubusercontent.com/8243154/85855273-ac439180-b7be-11ea-8942-b82dfaed71c9.png">
+
 
 ### Preprint Papers
 1. **Reinforcement Learning based Recommender System using Biclustering Technique**. Sungwoon Choi, Heonseok Ha, Uiwon Hwang, Chanju Kim, Jung-Woo Ha, Sungroh Yoon. arxiv 2018. [paper](https://arxiv.org/pdf/1801.05532.pdf) 
