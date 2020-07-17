@@ -20,7 +20,28 @@ Courses on Deep Reinforcement Learning (DRL) and DRL papers for recommender syst
 ### Conference Papers
 1. **An MDP-Based Recommender System**. Guy Shani, David Heckerman, Ronen I. Brafman. JMLR 2005. [paper](http://www.jmlr.org/papers/volume6/shani05a/shani05a.pdf)
 1. **Usage-Based Web Recommendations: A Reinforcement Learning Approach**. Nima Taghipour, Ahmad Kardan, Saeed Shiry Ghidary. Recsys 2007. [paper](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.157.9640&rep=rep1&type=pdf)
-1. **DJ-MC: A Reinforcement-Learning Agent for Music Playlist Recommendation**. Elad Liebman, Maytal Saar-Tsechansky, Peter Stone. AAMAS 2015. [paper](https://arxiv.org/pdf/1401.1880.pdf)
+#### **DJ-MC: A Reinforcement-Learning Agent for Music Playlist Recommendation**. Elad Liebman, Maytal Saar-Tsechansky, Peter Stone. AAMAS 2015. [paper](https://arxiv.org/pdf/1401.1880.pdf)
+
+- Formulate the selecting which sequence of songs to play as a Markov Decision Process, and demonstrate the potential effectiveness of a reinforcement-learning based approach in a new practical domain
+- DJ-MC is able to generate personalized song sequences within a single listening session of just 25–50 songs.
+- Playlist are of the length `k`
+- Finite set of `n` musical tracks
+- States - ordered sequence set of songs played
+- Actions - next song to play
+- Reward - utility of listeners pleasure hearing song `a` in state `s`. Divide into two types of rewards - reward function over song and reward function over transition.
+- Deterministic transition function P 
+- The agent must internally represent states and actions in such a way that enables generalization of the listener’s preferences
+- Use descriptors for song representations. Each song can be factored as a vector of scalar descriptors that reflect details about the
+spectral fingerprint of the song, its rhythmic characteristics, its overall loudness, and their change over time.
+- To represent different listener types, we generate 10 different playlist clusters by using k-means clustering on the
+playlists
+- Used Million Song Dataset and Yes.com and Last.fm dataset for experimenting setup
+-  For each experiment, we sample a 1000-song corpus from the Million Song Dataset.
+- Architecture contains of two components: learning the listeners parameters and planning sequence of the songs
+- Use tree-search heuristic for planning
+-  It repeats this process as many times as possible, finding the randomly generated trajectory which yields the highest expected payoff
+- Compare agent towards two alternative baselines: random choice and greedy algorithm that always plays the song with highest song rewards. 
+
 1. **Learning to Collaborate: Multi-Scenario Ranking via Multi-Agent Reinforcement Learning**. Jun Feng, Heng Li, Minlie Huang, Shichen Liu, Wenwu Ou, Zhirong Wang, Xiaoyan Zhu. WWW 2018. [paper](https://arxiv.org/pdf/1809.06260.pdf)
 1. **Reinforcement Mechanism Design for e-commerce**. Qingpeng Cai, Aris Filos-Ratsikas, Pingzhong Tang, Yiwei Zhang. WWW 2018. [paper](https://arxiv.org/pdf/1708.07607.pdf)
 1. **DRN: A Deep Reinforcement Learning Framework for News Recommendation**. Guanjie Zheng, Fuzheng Zhang, Zihan Zheng, Yang Xiang, Nicholas Jing Yuan, Xing Xie, Zhenhui Li. WWW 2018. [paper](http://www.personal.psu.edu/~gjz5038/paper/www2018_reinforceRec/www2018_reinforceRec.pdf)
@@ -28,9 +49,9 @@ Courses on Deep Reinforcement Learning (DRL) and DRL papers for recommender syst
 1. **Recommendations with Negative Feedback via Pairwise Deep Reinforcement Learning**. Xiangyu Zhao, Liang Zhang, Zhuoye Ding, Long Xia, Jiliang Tang, Dawei Yin. KDD 2018. [paper](https://arxiv.org/pdf/1802.06501.pdf)
 1. **Stabilizing Reinforcement Learning in Dynamic Environment with Application to Online Recommendation**. Shi-Yong Chen, Yang Yu, Qing Da, Jun Tan, Hai-Kuan Huang, Hai-Hong Tang. KDD 2018. [paper](http://lamda.nju.edu.cn/yuy/GetFile.aspx?File=papers/kdd18-RobustDQN.pdf)
 1. **Reinforcement Learning to Rank in E-Commerce Search Engine: Formalization, Analysis, and Application**. Yujing Hu, Qing Da, Anxiang Zeng, Yang Yu, Yinghui Xu. KDD 2018. [paper](https://arxiv.org/pdf/1803.00710.pdf)
-1. **A Reinforcement Learning Framework for Explainable Recommendation**. Xiting Wang, Yiru Chen, Jie Yang, Le Wu, Zhengtao Wu, Xing Xie. ICDM 2018. [paper](https://www.microsoft.com/en-us/research/uploads/prod/2018/08/main.pdf) [video] (https://youtu.be/Ys3YY7sSmIA)
+1. **A Reinforcement Learning Framework for Explainable Recommendation**. Xiting Wang, Yiru Chen, Jie Yang, Le Wu, Zhengtao Wu, Xing Xie. ICDM 2018. [paper](https://www.microsoft.com/en-us/research/uploads/prod/2018/08/main.pdf)
 
-#### **Top-K Off-Policy Correction for a REINFORCE Recommender System**. Minmin Chen, Alex Beutel, Paul Covington, Sagar Jain, Francois Belletti, Ed H. Chi. WSDM 2019. [paper](https://arxiv.org/pdf/1812.02353.pdf)
+#### **Top-K Off-Policy Correction for a REINFORCE Recommender System**. Minmin Chen, Alex Beutel, Paul Covington, Sagar Jain, Francois Belletti, Ed H. Chi. WSDM 2019. [paper](https://arxiv.org/pdf/1812.02353.pdf), [video](https://youtu.be/Ys3YY7sSmIA)
 
 - Leverage on a policy-based algorithm, REINFORCE.
 - Live experiment on Youtube data.
