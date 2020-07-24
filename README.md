@@ -128,7 +128,22 @@ avoid the divergence of of parameters
 
 <img src="https://user-images.githubusercontent.com/8243154/84734543-d4a2e300-afa9-11ea-9263-16e2cef1d9f8.png">
 
-1. **Generative Adversarial User Model for Reinforcement Learning Based Recommendation System**. Xinshi Chen, Shuang Li, Hui Li, Shaohua Jiang, Yuan Qi, Le Song. ICML 2019. [paper](http://proceedings.mlr.press/v97/chen19f/chen19f.pdf)
+#### **Generative Adversarial User Model for Reinforcement Learning Based Recommendation System**. Xinshi Chen, Shuang Li, Hui Li, Shaohua Jiang, Yuan Qi, Le Song. ICML 2019. [paper](http://proceedings.mlr.press/v97/chen19f/chen19f.pdf)
+- Environment: will correspond to a logged online user who can click on one of the k items displayed by the recommendation system in each page view (or interaction);
+- State S - ordered sequence of historical tasks
+- Actions - the subset of k items chosen by a recommender from list to display to the user. Actions are represent the subsets of all sets of k items of the total item space I at time t.
+- State transition - the user behavior model which returns the transition probability for <img src="https://render.githubusercontent.com/render/math?math=s_{t+1} = f(s_t, u_{a_t})"> given the previous state <img src="https://render.githubusercontent.com/render/math?math=s_{t}"> and the set of items A to display to the system. 
+- Reward - user's utility or satisfaction after making her choice in the state. 
+- Policy - the probability of displaying a subset <img src="https://render.githubusercontent.com/render/math?math=A_t"> of <img src="https://render.githubusercontent.com/render/math?math=I_t"> at current user state
+- Inspired by GAN estimate the behavioral function and reward function in a min-max fashion. Given the trajectory of T observed actions and the corresponding clicked items learn jointly behavioral and reward function.
+<img src = "https://user-images.githubusercontent.com/8243154/88405929-e67a7000-ce0a-11ea-820e-2b5381a72dff.png">
+- Designing a novel cascading Q-networks to handle the combinatorial action space, and an algorithm to estimate the parameters by interacting with the GAN user model. 
+- Public datasets: MovieLens, Last.fm, Yelp, RecSys15 YooChoose, 
+- Private datasets: Taobao, Ant Financial datasets
+- Since we cannot perform online experiments at this moment, we use collected data from the online news platform to fit a
+user model, and then use it as a test environment. Metrics: Cummulative reward, CTR
+- Offline metrics: Top-k precision
+
 1. **Aggregating E-commerce Search Results from Heterogeneous Sources via Hierarchical Reinforcement Learning**. Ryuichi Takanobu, Tao Zhuang, Minlie Huang, Jun Feng, Haihong Tang, Bo Zheng. WWW 2019. [paper](https://arxiv.org/pdf/1902.08882.pdf)
 1. **Policy Gradients for Contextual Recommendations**. Feiyang Pan, Qingpeng Cai, Pingzhong Tang, Fuzhen Zhuang, Qing He. WWW 2019. [paper](https://arxiv.org/pdf/1802.04162.pdf)
 1. **Reinforcement Knowledge Graph Reasoning for Explainable Recommendation**. Yikun Xian, Zuohui Fu, S. Muthukrishnan, Gerard de Melo, Yongfeng Zhang. SIGIR 2019. [paper](http://yongfeng.me/attach/xian-sigir2019.pdf)
