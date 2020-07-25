@@ -13,13 +13,33 @@ Courses on Deep Reinforcement Learning (DRL) and DRL papers for recommender syst
 1. **Reinforcement Learning: An Introduction (Second Edition)**. Richard S. Sutton and Andrew G. Barto. [book](http://incompleteideas.net/book/bookdraft2017nov5.pdf)
 
 ## Papers
-### Survey Papers
+### Paper to read
 1. **A Brief Survey of Deep Reinforcement Learning**. Kai Arulkumaran, Marc Peter Deisenroth, Miles Brundage, Anil Anthony Bharath. 2017. [paper](https://arxiv.org/pdf/1708.05866.pdf)
 1. **Deep Reinforcement Learing: An Overview**. Yuxi Li. 2017. [paper](https://arxiv.org/pdf/1701.07274.pdf)
-
-### Conference Papers
+1. **Learning to Collaborate: Multi-Scenario Ranking via Multi-Agent Reinforcement Learning**. Jun Feng, Heng Li, Minlie Huang, Shichen Liu, Wenwu Ou, Zhirong Wang, Xiaoyan Zhu. WWW 2018. [paper](https://arxiv.org/pdf/1809.06260.pdf)
+1. **Reinforcement Mechanism Design for e-commerce**. Qingpeng Cai, Aris Filos-Ratsikas, Pingzhong Tang, Yiwei Zhang. WWW 2018. [paper](https://arxiv.org/pdf/1708.07607.pdf)
+1. **Deep Reinforcement Learning for Page-wise Recommendations**. Xiangyu Zhao, Long Xia, Liang Zhang, Zhuoye Ding, Dawei Yin, Jiliang Tang.  RecSys 2018. [paper](https://arxiv.org/pdf/1805.02343.pdf)
+1. **Stabilizing Reinforcement Learning in Dynamic Environment with Application to Online Recommendation**. Shi-Yong Chen, Yang Yu, Qing Da, Jun Tan, Hai-Kuan Huang, Hai-Hong Tang. KDD 2018. [paper](http://lamda.nju.edu.cn/yuy/GetFile.aspx?File=papers/kdd18-RobustDQN.pdf)
+1. **Reinforcement Learning to Rank in E-Commerce Search Engine: Formalization, Analysis, and Application**. Yujing Hu, Qing Da, Anxiang Zeng, Yang Yu, Yinghui Xu. KDD 2018. [paper](https://arxiv.org/pdf/1803.00710.pdf)
+1. **A Reinforcement Learning Framework for Explainable Recommendation**. Xiting Wang, Yiru Chen, Jie Yang, Le Wu, Zhengtao Wu, Xing Xie. ICDM 2018. [paper](https://www.microsoft.com/en-us/research/uploads/prod/2018/08/main.pdf)
+1. **Aggregating E-commerce Search Results from Heterogeneous Sources via Hierarchical Reinforcement Learning**. Ryuichi Takanobu, Tao Zhuang, Minlie Huang, Jun Feng, Haihong Tang, Bo Zheng. WWW 2019. [paper](https://arxiv.org/pdf/1902.08882.pdf)
+1. **Policy Gradients for Contextual Recommendations**. Feiyang Pan, Qingpeng Cai, Pingzhong Tang, Fuzhen Zhuang, Qing He. WWW 2019. [paper](https://arxiv.org/pdf/1802.04162.pdf)
+1. **Reinforcement Knowledge Graph Reasoning for Explainable Recommendation**. Yikun Xian, Zuohui Fu, S. Muthukrishnan, Gerard de Melo, Yongfeng Zhang. SIGIR 2019. [paper](http://yongfeng.me/attach/xian-sigir2019.pdf)
+1. **A Model-Based Reinforcement Learning with Adversarial Training for Online Recommendation**. Xueying Bai, Jian Guan, Hongning Wang. NeurIPS 2019. [paper](http://papers.nips.cc/paper/9257-a-model-based-reinforcement-learning-with-adversarial-training-for-online-recommendation.pdf)
+1. **Text-Based Interactive Recommendation via Constraint-Augmented Reinforcement Learning**. Ruiyi Zhang, Tong Yu, Yilin Shen, Hongxia Jin, Changyou Chen, Lawrence Carin. NeurIPS 2019. [paper](http://people.ee.duke.edu/~lcarin/Ruiyi_NeurIPS2019.pdf)
+1. **DRCGR: Deep reinforcement learning framework incorporating CNN and GAN-based for interactive recommendation**. Rong Gao, Haifeng Xia, Jing Li, Donghua Liu, Shuai Chen, and Gang Chun. ICDM 2019. [paper](https://ieeexplore.ieee.org/document/8970700)
+1. **Pseudo Dyna-Q: A Reinforcement Learning Framework for Interactive Recommendation**. Lixin Zou, Long Xia, Pan Du, Zhuo Zhang, Ting Bai, Weidong Liu, Jian-Yun Nie, Dawei Yin. WSDM 2020. [paper](https://tbbaby.github.io/pub/wsdm20.pdf)
+1. **End-to-End Deep Reinforcement Learning based Recommendation with Supervised Embedding**. Feng Liu, Huifeng Guo, Xutao Li, Ruiming Tang, Yunming Ye, Xiuqiang He. WSDM 2020. [paper](https://dl.acm.org/doi/abs/10.1145/3336191.3371858)
+1. **Reinforced Negative Sampling over Knowledge Graph for Recommendation**. Xiang Wang, Yaokun Xu, Xiangnan He, Yixin Cao, Meng Wang, Tat-Seng Chua. WWW 2020. [paper](https://arxiv.org/pdf/2003.05753.pdf)
 1. **An MDP-Based Recommender System**. Guy Shani, David Heckerman, Ronen I. Brafman. JMLR 2005. [paper](http://www.jmlr.org/papers/volume6/shani05a/shani05a.pdf)
 1. **Usage-Based Web Recommendations: A Reinforcement Learning Approach**. Nima Taghipour, Ahmad Kardan, Saeed Shiry Ghidary. Recsys 2007. [paper](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.157.9640&rep=rep1&type=pdf)
+
+### Preprint Papers
+1. **Reinforcement Learning based Recommender System using Biclustering Technique**. Sungwoon Choi, Heonseok Ha, Uiwon Hwang, Chanju Kim, Jung-Woo Ha, Sungroh Yoon. arxiv 2018. [paper](https://arxiv.org/pdf/1801.05532.pdf) 
+1. **Deep Reinforcement Learning based Recommendation with Explicit User-Item Interactions Modeling**. Feng Liu, Ruiming Tang, Xutao Li, Weinan Zhang, Yunming Ye, Haokun Chen, Huifeng Guo, Yuzhou Zhang. arxiv 2018. [paper](https://arxiv.org/pdf/1810.12027.pdf)
+1. **Model-Based Reinforcement Learning for Whole-Chain Recommendations**. Xiangyu Zhao, Long Xia, Yihong Zhao, Dawei Yin, Jiliang Tang. arxiv 2019. [paper](https://arxiv.org/pdf/1902.03987.pdf)
+
+###  Reviewed Papers
 #### **DJ-MC: A Reinforcement-Learning Agent for Music Playlist Recommendation**. Elad Liebman, Maytal Saar-Tsechansky, Peter Stone. AAMAS 2015. [paper](https://arxiv.org/pdf/1401.1880.pdf)
 
 - Formulate the selecting which sequence of songs to play as a Markov Decision Process, and demonstrate the potential effectiveness of a reinforcement-learning based approach in a new practical domain
@@ -42,8 +62,6 @@ playlists
 -  It repeats this process as many times as possible, finding the randomly generated trajectory which yields the highest expected payoff
 - Compare agent towards two alternative baselines: random choice and greedy algorithm that always plays the song with highest song rewards. 
 
-1. **Learning to Collaborate: Multi-Scenario Ranking via Multi-Agent Reinforcement Learning**. Jun Feng, Heng Li, Minlie Huang, Shichen Liu, Wenwu Ou, Zhirong Wang, Xiaoyan Zhu. WWW 2018. [paper](https://arxiv.org/pdf/1809.06260.pdf)
-1. **Reinforcement Mechanism Design for e-commerce**. Qingpeng Cai, Aris Filos-Ratsikas, Pingzhong Tang, Yiwei Zhang. WWW 2018. [paper](https://arxiv.org/pdf/1708.07607.pdf)
 #### **DRN: A Deep Reinforcement Learning Framework for News Recommendation**. Guanjie Zheng, Fuzheng Zhang, Zihan Zheng, Yang Xiang, Nicholas Jing Yuan, Xing Xie, Zhenhui Li. WWW 2018. [paper](http://www.personal.psu.edu/~gjz5038/paper/www2018_reinforceRec/www2018_reinforceRec.pdf)
 
 - In order to better model the dynamic nature of news characteristics and user preference, propose to use Deep Q-Learning (DQN) framework
@@ -82,8 +100,6 @@ and A(s, a) is determined by both the state features and the action features
 - Metrics: Precision@k, NDCG
 
 
-
-1. **Deep Reinforcement Learning for Page-wise Recommendations**. Xiangyu Zhao, Long Xia, Liang Zhang, Zhuoye Ding, Dawei Yin, Jiliang Tang.  RecSys 2018. [paper](https://arxiv.org/pdf/1805.02343.pdf)
 #### **Recommendations with Negative Feedback via Pairwise Deep Reinforcement Learning**. Xiangyu Zhao, Liang Zhang, Zhuoye Ding, Long Xia, Jiliang Tang, Dawei Yin. KDD 2018. [paper](https://arxiv.org/pdf/1802.06501.pdf)
 
 - Collaborative filtering and content-based models may fail given the dynamic nature of user's preferences. The current RL systems designed to maximize the short-term rewards
@@ -99,10 +115,6 @@ and A(s, a) is determined by both the state features and the action features
 avoid the divergence of of parameters
 - Closed dataset on JD.com data
 - Select MAP and NDCG@40 as a key metrics to evaluate the data
-
-1. **Stabilizing Reinforcement Learning in Dynamic Environment with Application to Online Recommendation**. Shi-Yong Chen, Yang Yu, Qing Da, Jun Tan, Hai-Kuan Huang, Hai-Hong Tang. KDD 2018. [paper](http://lamda.nju.edu.cn/yuy/GetFile.aspx?File=papers/kdd18-RobustDQN.pdf)
-1. **Reinforcement Learning to Rank in E-Commerce Search Engine: Formalization, Analysis, and Application**. Yujing Hu, Qing Da, Anxiang Zeng, Yang Yu, Yinghui Xu. KDD 2018. [paper](https://arxiv.org/pdf/1803.00710.pdf)
-1. **A Reinforcement Learning Framework for Explainable Recommendation**. Xiting Wang, Yiru Chen, Jie Yang, Le Wu, Zhengtao Wu, Xing Xie. ICDM 2018. [paper](https://www.microsoft.com/en-us/research/uploads/prod/2018/08/main.pdf)
 
 #### **Top-K Off-Policy Correction for a REINFORCE Recommender System**. Minmin Chen, Alex Beutel, Paul Covington, Sagar Jain, Francois Belletti, Ed H. Chi. WSDM 2019. [paper](https://arxiv.org/pdf/1812.02353.pdf), [video](https://youtu.be/Ys3YY7sSmIA)
 
@@ -144,10 +156,6 @@ avoid the divergence of of parameters
 user model, and then use it as a test environment. Metrics: Cummulative reward, CTR
 - Offline metrics: Top-k precision
 
-1. **Aggregating E-commerce Search Results from Heterogeneous Sources via Hierarchical Reinforcement Learning**. Ryuichi Takanobu, Tao Zhuang, Minlie Huang, Jun Feng, Haihong Tang, Bo Zheng. WWW 2019. [paper](https://arxiv.org/pdf/1902.08882.pdf)
-1. **Policy Gradients for Contextual Recommendations**. Feiyang Pan, Qingpeng Cai, Pingzhong Tang, Fuzhen Zhuang, Qing He. WWW 2019. [paper](https://arxiv.org/pdf/1802.04162.pdf)
-1. **Reinforcement Knowledge Graph Reasoning for Explainable Recommendation**. Yikun Xian, Zuohui Fu, S. Muthukrishnan, Gerard de Melo, Yongfeng Zhang. SIGIR 2019. [paper](http://yongfeng.me/attach/xian-sigir2019.pdf)
-
 #### **Reinforcement Learning to Optimize Long-term User Engagement in Recommender Systems**. Lixin Zou, Long Xia, Zhuoye Ding, Jiaxing Song, Weidong Liu, Dawei Yin. KDD 2019. [paper](https://arxiv.org/pdf/1902.05570.pdf)
 - Introduced an RL framework - FeedRec to optimize long-term user engagement. Based on Q-network which designed in hierarchical LSTM and S-network, that simulates the environment 
 - S-network assists Q-Network and voids the instability of convergence in policy learning. Specifically, in each round of recommendations, aligning with the user feedback, S-network generates the user's response, the dwell time, the revisited time, and flag that indicates that the user will leave or not the platform.
@@ -170,13 +178,6 @@ user model, and then use it as a test environment. Metrics: Cummulative reward, 
 - Agent - the search engine
 - Environment - the customers
 - Commodity search and shopping process can see as a sequential decision process. Customers decision process for engine and customers. The engine and customers are the environments of each other
-
-1. **A Model-Based Reinforcement Learning with Adversarial Training for Online Recommendation**. Xueying Bai, Jian Guan, Hongning Wang. NeurIPS 2019. [paper](http://papers.nips.cc/paper/9257-a-model-based-reinforcement-learning-with-adversarial-training-for-online-recommendation.pdf)
-1. **Text-Based Interactive Recommendation via Constraint-Augmented Reinforcement Learning**. Ruiyi Zhang, Tong Yu, Yilin Shen, Hongxia Jin, Changyou Chen, Lawrence Carin. NeurIPS 2019. [paper](http://people.ee.duke.edu/~lcarin/Ruiyi_NeurIPS2019.pdf)
-1. **DRCGR: Deep reinforcement learning framework incorporating CNN and GAN-based for interactive recommendation**. Rong Gao, Haifeng Xia, Jing Li, Donghua Liu, Shuai Chen, and Gang Chun. ICDM 2019. [paper](https://ieeexplore.ieee.org/document/8970700)
-1. **Pseudo Dyna-Q: A Reinforcement Learning Framework for Interactive Recommendation**. Lixin Zou, Long Xia, Pan Du, Zhuo Zhang, Ting Bai, Weidong Liu, Jian-Yun Nie, Dawei Yin. WSDM 2020. [paper](https://tbbaby.github.io/pub/wsdm20.pdf)
-1. **End-to-End Deep Reinforcement Learning based Recommendation with Supervised Embedding**. Feng Liu, Huifeng Guo, Xutao Li, Ruiming Tang, Yunming Ye, Xiuqiang He. WSDM 2020. [paper](https://dl.acm.org/doi/abs/10.1145/3336191.3371858)
-1. **Reinforced Negative Sampling over Knowledge Graph for Recommendation**. Xiang Wang, Yaokun Xu, Xiangnan He, Yixin Cao, Meng Wang, Tat-Seng Chua. WWW 2020. [paper](https://arxiv.org/pdf/2003.05753.pdf)
 
 #### **Deep Reinforcement Learning for List-wise Recommendations** Xiangyu Zhao, Liang Zhang, Long Xia, Zhuoye Ding, Dawei Yin, Jiliang Tang, 2017 [paper](arxiv.org/abs/1801.00209)
 
@@ -246,14 +247,10 @@ such as personality, satisfaction, interests; observable features such as demogr
 - RECSIM offers stackable hierarchical agent layers intended to solve a more abstract recommendation problem. A hierarchical agent layer does not materialize a slate of documents (i.e., RS action), but relies on one or more base agents to do so.
 - RECSIM can be viewed as a dynamic Bayesian network that defines a probability distribution over trajectories of slates, choices, and observations.
 - Several baseline agents implemented:
--- TabularQAgent - Q-learning algorithm. Enumarates all possible slates to maximize over Q values
--- Full-slateQAgent - deep Q-Network agent by threating each slate as a single action
--- Random agent - random slates with no duplicates
+  - TabularQAgent - Q-learning algorithm. Enumarates all possible slates to maximize over Q values
+  - Full-slateQAgent - deep Q-Network agent by threating each slate as a single action
+  - Random agent - random slates with no duplicates
 - [RECSIM code] (https://github.com/google-research/recsim)
 <img src = "https://user-images.githubusercontent.com/8243154/85855273-ac439180-b7be-11ea-8942-b82dfaed71c9.png">
 
 
-### Preprint Papers
-1. **Reinforcement Learning based Recommender System using Biclustering Technique**. Sungwoon Choi, Heonseok Ha, Uiwon Hwang, Chanju Kim, Jung-Woo Ha, Sungroh Yoon. arxiv 2018. [paper](https://arxiv.org/pdf/1801.05532.pdf) 
-1. **Deep Reinforcement Learning based Recommendation with Explicit User-Item Interactions Modeling**. Feng Liu, Ruiming Tang, Xutao Li, Weinan Zhang, Yunming Ye, Haokun Chen, Huifeng Guo, Yuzhou Zhang. arxiv 2018. [paper](https://arxiv.org/pdf/1810.12027.pdf)
-1. **Model-Based Reinforcement Learning for Whole-Chain Recommendations**. Xiangyu Zhao, Long Xia, Yihong Zhao, Dawei Yin, Jiliang Tang. arxiv 2019. [paper](https://arxiv.org/pdf/1902.03987.pdf)
