@@ -16,7 +16,6 @@ Courses on Deep Reinforcement Learning (DRL) and DRL papers for recommender syst
 ### Paper to read
 1. **A Brief Survey of Deep Reinforcement Learning**. Kai Arulkumaran, Marc Peter Deisenroth, Miles Brundage, Anil Anthony Bharath. 2017. [paper](https://arxiv.org/pdf/1708.05866.pdf)
 1. **Deep Reinforcement Learing: An Overview**. Yuxi Li. 2017. [paper](https://arxiv.org/pdf/1701.07274.pdf)
-1. **Learning to Collaborate: Multi-Scenario Ranking via Multi-Agent Reinforcement Learning**. Jun Feng, Heng Li, Minlie Huang, Shichen Liu, Wenwu Ou, Zhirong Wang, Xiaoyan Zhu. WWW 2018. [paper](https://arxiv.org/pdf/1809.06260.pdf)
 1. **Reinforcement Mechanism Design for e-commerce**. Qingpeng Cai, Aris Filos-Ratsikas, Pingzhong Tang, Yiwei Zhang. WWW 2018. [paper](https://arxiv.org/pdf/1708.07607.pdf)
 1. **Deep Reinforcement Learning for Page-wise Recommendations**. Xiangyu Zhao, Long Xia, Liang Zhang, Zhuoye Ding, Dawei Yin, Jiliang Tang.  RecSys 2018. [paper](https://arxiv.org/pdf/1805.02343.pdf)
 1. **Stabilizing Reinforcement Learning in Dynamic Environment with Application to Online Recommendation**. Shi-Yong Chen, Yang Yu, Qing Da, Jun Tan, Hai-Kuan Huang, Hai-Hong Tang. KDD 2018. [paper](http://lamda.nju.edu.cn/yuy/GetFile.aspx?File=papers/kdd18-RobustDQN.pdf)
@@ -40,6 +39,47 @@ Courses on Deep Reinforcement Learning (DRL) and DRL papers for recommender syst
 1. **Model-Based Reinforcement Learning for Whole-Chain Recommendations**. Xiangyu Zhao, Long Xia, Yihong Zhao, Dawei Yin, Jiliang Tang. arxiv 2019. [paper](https://arxiv.org/pdf/1902.03987.pdf)
 
 ###  Reviewed Papers
+
+#### **Learning to Collaborate: Multi-Scenario Ranking via Multi-Agent Reinforcement Learning**. Jun Feng, Heng Li, Minlie Huang, Shichen Liu, Wenwu Ou, Zhirong Wang, Xiaoyan Zhu. WWW 2018. [paper](https://arxiv.org/pdf/1809.06260.pdf)
+- Multi-scenario ranking as a fully cooperative, partially observable, multi-agent sequential decision
+problem. 
+- Propose a novel model named Multi-Agent Recurrent Deterministic Policy Gradient (MA-RDPG) which has a communication component for passing messages, several private actors (agents) for making actions for ranking, and a centralized critic for evaluating the overall performance of the co-working actors.
+- Agents are coloborate with each other by sending the global action-value function and passing messages that encodes historical information across scenarios. Each ranking strategy in one scenario is treated as agent. Each agent takes local observations
+(user behavior data) and makes local actions for ranking items with its private actor network. . Different agents share a global critic network to enable them to accomplish the same goal collaboratively. The critic network evaluates the future overall rewards starting from a current state and taking actions. The agents communicate with each other by sending messages. 
+- Colloborative optimization of the key metrics (CTR, GMV, CVR) 
+- Model evaluation results on Taobao data
+- The environment is partially observable, and each agent only receives a local observation instead of observing the full state of the environment
+- In multi-agent settings the state of the environment is global, shared by all agents while the observation, the action and the intermediate reward are all private, only processed by the agent itself.
+- *Communication component* The message encodes the local observation and a message from the environment. The component generates the next message based on the previous message and observation. For this purpose the LSTM architecture is applied.
+<img src="https://user-images.githubusercontent.com/8243154/89127866-21c41f80-d52c-11ea-8794-a23a4bc46c8f.png"> 
+- *Private actor* Action is defined as a vector of a real values . 
+- Behavioral data pattern:
+  - Main search ranks the relevant items when a user issues a query through the search box in the entrance page of the E-commerce
+platform.
+  - In-shop search ranks items in a certain shop when a user browse product at a shop's page. 
+  - Users constantly navigate cross the two scenarios. When an user find a dress that she likes in the main search, she may go into the shop site for more similar products. When the user finds that the clothes in the shop are too limited, the user may go back to the main search for more products from other shops
+
+| Scenario       | Feature           | Description                                                                                              |
+|----------------|-------------------|----------------------------------------------------------------------------------------------------------|
+| Main search    | CTR               | An CTR estimation using logistic regression, considering features of users, items and their interactions |
+| Main search    | Rating Score      | Average user ratings on a certain item                                                                   |
+| Main search    | Search popularity | Popularity of the item shop                                                                              |
+| In-shop search | Latest Collection | Whether an item is the latest collection or new arrivals of the shop                                     |
+| In-shop search | Sales volume      | Sales volume of an in-shop item                                                                          |
+
+- Environment - online E-commerce platform
+- Agents - one is search engine for main search and the other is in-shop search. At each step, one of the search engines returned a ranked list of products according to the ranking algorithm. The two agents work together to maximize the overall performance
+- States are partially observable. 
+- To rank items, the ranking algorithm computes an inner product of the feature value vector and the weight vector.
+Changing an action means to change the weight vector for the ranking features.
+- Reward. We design the rewards by considering not only purchase behaviors but also other user behaviors. If a click happens, there is a positive reward of 1. If there is no purchase nor click, a negative reward of −1 is received. If a user leaves the page without buying any product, there is a negative reward of −5.
+
+<img src="https://user-images.githubusercontent.com/8243154/89128476-d3654f80-d530-11ea-8cd7-5810bb60494a.png">
+
+- Baseline models: Empirical weigths, learning to Rank
+- No code
+- Performance is measured in terms of the GMV gap in both search scenarios. 
+
 #### **DJ-MC: A Reinforcement-Learning Agent for Music Playlist Recommendation**. Elad Liebman, Maytal Saar-Tsechansky, Peter Stone. AAMAS 2015. [paper](https://arxiv.org/pdf/1401.1880.pdf)
 
 - Formulate the selecting which sequence of songs to play as a Markov Decision Process, and demonstrate the potential effectiveness of a reinforcement-learning based approach in a new practical domain
@@ -227,7 +267,7 @@ user model, and then use it as a test environment. Metrics: Cummulative reward, 
 - Transition probability
 - Reward - measurement of user engagement. 
 - In the MDP model each user should be viewed as a separate environment or separate MDP. Hence it critical to allow generalization across users, since few if any users generates enough experience to allow reasonable recommendations.
-- Combinatorial optimizaton problem - find the slate with the maximum Q-value. SlateQ allows to decompose into conbination of the item-wise Q-values of the consistent items. Tried top-k, greedy, LP-based methods.
+- Combinatorial optimizaton problem - find the slate with the maximum Q-value. SlateQ allows to decompose into combination of the item-wise Q-values of the consistent items. Tried top-k, greedy, LP-based methods.
 - Items and user interests as a topic modeling problem
 - As a choice model, use an exponential cascade model that accounts for document position in the slate. This choice model assumes "attention" is given to one document at a time, with exponentially decreasing attention given to documents as a user moves down the slate.
 - A user choice model impacts which document(if any) from the slate is consumed by the user. Made an assumption that a user can observe any recommender document's topic before selection but can't observe its quality before consumption
