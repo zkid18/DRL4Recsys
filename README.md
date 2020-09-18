@@ -44,9 +44,9 @@ Courses on Deep Reinforcement Learning (DRL) and DRL papers for recommender syst
 - Multi-scenario ranking as a fully cooperative, partially observable, multi-agent sequential decision
 problem. 
 - Propose a novel model named Multi-Agent Recurrent Deterministic Policy Gradient (MA-RDPG) which has a communication component for passing messages, several private actors (agents) for making actions for ranking, and a centralized critic for evaluating the overall performance of the co-working actors.
-- Agents are coloborate with each other by sending the global action-value function and passing messages that encodes historical information across scenarios. Each ranking strategy in one scenario is treated as agent. Each agent takes local observations
+- Agents are collaborate with each other by sending the global action-value function and passing messages that encodes historical information across scenarios. Each ranking strategy in one scenario is treated as agent. Each agent takes local observations
 (user behavior data) and makes local actions for ranking items with its private actor network. . Different agents share a global critic network to enable them to accomplish the same goal collaboratively. The critic network evaluates the future overall rewards starting from a current state and taking actions. The agents communicate with each other by sending messages. 
-- Colloborative optimization of the key metrics (CTR, GMV, CVR) 
+- Collaborative optimization of the key metrics (CTR, GMV, CVR) 
 - Model evaluation results on Taobao data
 - The environment is partially observable, and each agent only receives a local observation instead of observing the full state of the environment
 - In multi-agent settings the state of the environment is global, shared by all agents while the observation, the action and the intermediate reward are all private, only processed by the agent itself.
@@ -76,7 +76,7 @@ Changing an action means to change the weight vector for the ranking features.
 
 <img src="https://user-images.githubusercontent.com/8243154/89128476-d3654f80-d530-11ea-8cd7-5810bb60494a.png">
 
-- Baseline models: Empirical weigths, learning to Rank
+- Baseline models: Empirical weights, learning to Rank
 - No code
 - Performance is measured in terms of the GMV gap in both search scenarios. 
 
