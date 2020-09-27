@@ -27,7 +27,7 @@ Courses on Deep Reinforcement Learning (DRL) and DRL papers for recommender syst
 1. **A Model-Based Reinforcement Learning with Adversarial Training for Online Recommendation**. Xueying Bai, Jian Guan, Hongning Wang. NeurIPS 2019. [paper](http://papers.nips.cc/paper/9257-a-model-based-reinforcement-learning-with-adversarial-training-for-online-recommendation.pdf)
 1. **Text-Based Interactive Recommendation via Constraint-Augmented Reinforcement Learning**. Ruiyi Zhang, Tong Yu, Yilin Shen, Hongxia Jin, Changyou Chen, Lawrence Carin. NeurIPS 2019. [paper](http://people.ee.duke.edu/~lcarin/Ruiyi_NeurIPS2019.pdf)
 1. **DRCGR: Deep reinforcement learning framework incorporating CNN and GAN-based for interactive recommendation**. Rong Gao, Haifeng Xia, Jing Li, Donghua Liu, Shuai Chen, and Gang Chun. ICDM 2019. [paper](https://ieeexplore.ieee.org/document/8970700)
-1. **Pseudo Dyna-Q: A Reinforcement Learning Framework for Interactive Recommendation**. Lixin Zou, Long Xia, Pan Du, Zhuo Zhang, Ting Bai, Weidong Liu, Jian-Yun Nie, Dawei Yin. WSDM 2020. [paper](https://tbbaby.github.io/pub/wsdm20.pdf)
+
 1. **End-to-End Deep Reinforcement Learning based Recommendation with Supervised Embedding**. Feng Liu, Huifeng Guo, Xutao Li, Ruiming Tang, Yunming Ye, Xiuqiang He. WSDM 2020. [paper](https://dl.acm.org/doi/abs/10.1145/3336191.3371858)
 1. **Reinforced Negative Sampling over Knowledge Graph for Recommendation**. Xiang Wang, Yaokun Xu, Xiangnan He, Yixin Cao, Meng Wang, Tat-Seng Chua. WWW 2020. [paper](https://arxiv.org/pdf/2003.05753.pdf)
 1. **An MDP-Based Recommender System**. Guy Shani, David Heckerman, Ronen I. Brafman. JMLR 2005. [paper](http://www.jmlr.org/papers/volume6/shani05a/shani05a.pdf)
@@ -39,6 +39,36 @@ Courses on Deep Reinforcement Learning (DRL) and DRL papers for recommender syst
 1. **Model-Based Reinforcement Learning for Whole-Chain Recommendations**. Xiangyu Zhao, Long Xia, Yihong Zhao, Dawei Yin, Jiliang Tang. arxiv 2019. [paper](https://arxiv.org/pdf/1902.03987.pdf)
 
 ###  Reviewed Papers
+
+#### **Keeping Dataset Biases out of the Simulation.A Debiased Simulator for Reinforcement Learning based Recommender Systems.** Jin Huang, Harrie Oosterhuis, Maarten de Rijke, Herke van Hoof RecSys 2020 [paper](https://dl.acm.org/doi/10.1145/3383313.3412252)
+-  Applying RL4Rec online comes with risks: exploration may lead to periods of detrimental user experience. Moreover, few researchers have access to real-world recommender systems. Simulations have been put forward as a solution where user feedback is simulated based on logged historical user data, thus enabling optimization and evaluation without being run online. While simulators do not risk the user experience and are widely accessible, we identify an important limitation of existing simulation methods.
+- Furthermore, online deployment takes time, costs money, and many researchers – both in academia and industry – simply do not have access to an actual platform with live users.
+- To evaluate the effects of bias on RL4Rec simulations, we propose a novel evaluation approach for simulators that considers the performance of policies optimized with the simulator
+- Fully synthetic approach oversimplifies user's behavior.
+- Two influential types of biases are popularity bias (user interacts only with popular items -> long-tail distribuition) and
+positivity bias (user likes the items that he/she likes the most)
+- States: historical interactions of useru till the t-th turn of interaction, consisting of the recommended items and the corresponding feedback.
+- Actions: Items to recommend
+- Rewards: After receiving action at , consisting of item it being recommended by the RS, the (simulated) user gives feedback
+ft ∈ {0,1} (i.e.,skip or click) on this item. 
+- Transition probability: After a user has provided a feedback, tell the next action
+- Discount factor: Balancing factor between the immediate and future rewards.
+- RL4Rec simulator components: user model, item model, user-choice model. The user model and item model aim to capture user preference for items, while the user-choice model simulates user feedback when an item is recommended by an RS.
+<img src="https://user-images.githubusercontent.com/8243154/94359779-03217580-00e4-11eb-84f9-dd0c3ca68fb9.png">
+- To address the functional requirements of a simulator, we design our Simulator for OFfline leArning and evaluation (SOFA), a debiased simulator consisting of two components: (i) a debiased user-item rating matrix to present users’ preference on items, and (ii) a userchoice model to simulate user feedback, and provide the updated state and immediate reward to RS
+  - The debiased user-item rating matrix is produced by the IBMS where we apply Propensity-Scored Matrix Factorization (MF-IPS) 
+  - The user-choice modelsimulates user feedback on the item being recommended from the RS, and provides the updated state and immediate reward to RS
+- Datasets: Yahoo R3, Coat
+- For the policy used in the experiments, we use a basic DQN policy with a Gated Recurrent Unit(GRU)-based network to encode discrete
+state and approximate action-value function. 
+- Metrics: Accuracy, Mean Sqaured Error (MSE),  Mean Absolute Error (MAE)
+- The proposed SOFA with IBMS does mitigate enough bias to result in better performing policies.
+- While we think that the IBMS is an important contribution to RL4Rec, SOFA only simulates the single-item recommendation scenario, where only one item is recommended at once
+
+#### **Pseudo Dyna-Q: A Reinforcement Learning Framework for Interactive Recommendation**. Lixin Zou, Long Xia, Pan Du, Zhuo Zhang, Ting Bai, Weidong Liu, Jian-Yun Nie, Dawei Yin. WSDM 2020. [paper](https://tbbaby.github.io/pub/wsdm20.pdf)
+
+- Applying reinforcement learning (RL) in recommender systems is attractive but costly due to the constraint of the interaction with
+real customers, where performing online policy learning through interacting with real customers usually harms customer experiences.
 
 #### **Learning to Collaborate: Multi-Scenario Ranking via Multi-Agent Reinforcement Learning**. Jun Feng, Heng Li, Minlie Huang, Shichen Liu, Wenwu Ou, Zhirong Wang, Xiaoyan Zhu. WWW 2018. [paper](https://arxiv.org/pdf/1809.06260.pdf)
 - Multi-scenario ranking as a fully cooperative, partially observable, multi-agent sequential decision
