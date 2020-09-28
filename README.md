@@ -47,7 +47,7 @@ Courses on Deep Reinforcement Learning (DRL) and DRL papers for recommender syst
 - Fully synthetic approach oversimplifies user's behavior.
 - Two influential types of biases are popularity bias (user interacts only with popular items -> long-tail distribuition) and
 positivity bias (user likes the items that he/she likes the most)
-- States: historical interactions of useru till the t-th turn of interaction, consisting of the recommended items and the corresponding feedback.
+- States: historical interactions of users till the t-th turn of interaction, consisting of the recommended items and the corresponding feedback.
 - Actions: Items to recommend
 - Rewards: After receiving action at , consisting of item it being recommended by the RS, the (simulated) user gives feedback
 ft ∈ {0,1} (i.e.,skip or click) on this item. 
@@ -57,7 +57,7 @@ ft ∈ {0,1} (i.e.,skip or click) on this item.
 <img src="https://user-images.githubusercontent.com/8243154/94359779-03217580-00e4-11eb-84f9-dd0c3ca68fb9.png">
 - To address the functional requirements of a simulator, we design our Simulator for OFfline leArning and evaluation (SOFA), a debiased simulator consisting of two components: (i) a debiased user-item rating matrix to present users’ preference on items, and (ii) a userchoice model to simulate user feedback, and provide the updated state and immediate reward to RS
   - The debiased user-item rating matrix is produced by the IBMS where we apply Propensity-Scored Matrix Factorization (MF-IPS) 
-  - The user-choice modelsimulates user feedback on the item being recommended from the RS, and provides the updated state and immediate reward to RS
+  - The user-choice model simulates user feedback on the item being recommended from the RS, and provides the updated state and immediate reward to RS
 - Datasets: Yahoo R3, Coat
 - For the policy used in the experiments, we use a basic DQN policy with a Gated Recurrent Unit(GRU)-based network to encode discrete
 state and approximate action-value function. 
