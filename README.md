@@ -305,8 +305,7 @@ user model, and then use it as a test environment. Metrics: Cummulative reward, 
 - Models are trained periodically and pushed to the server. The ranker uses the latest model to recommend items and logs user feedback, which is used to train new models. Using LTV labels, iterative model training, and pushing can be viewed as a form of generalized policy iteration.
 - A candidate generator retrieves a small subset (hundreds) of items from a large corpus that best matches a user context. The ranker scores/ranks are candidates using a DNN with both user context and item features as input. It optimizes a combination of several objectives (e.g., clicks, expected engagement, several other factors).
 
-#### **RECSIM : A Configurable Simulation Platform for Recommender Systems** Ie E, Hsu C, Mladenov M, Jain V, Narvekar S, Wang J, Wu R, Boutilier C
-2019 [paper](https://arxiv.org/pdf/1909.04847.pdf)
+#### **RECSIM : A Configurable Simulation Platform for Recommender Systems** Ie E, Hsu C, Mladenov M, Jain V, Narvekar S, Wang J, Wu R, Boutilier C 2019 [paper](https://arxiv.org/pdf/1909.04847.pdf)
 - RECSIM is a configurable platform that allows the natural, albeit abstract, specification of an environment in which a recommender interacts with a corpus of documents (or recommendable items) and a set of users, to support the development of recommendation algorithms.
 - The user model samples users from a prior distribution over (configurable) user features: these may include latent features
 such as personality, satisfaction, interests; observable features such as demographics; and behavioral features such as session length, visit frequency, or time budget
@@ -324,3 +323,10 @@ such as personality, satisfaction, interests; observable features such as demogr
 <img src = "https://user-images.githubusercontent.com/8243154/85855273-ac439180-b7be-11ea-8942-b82dfaed71c9.png">
 
 
+#### **Contextual Meta-Bandit for Recommender Systems Selection Marlesson** R. O. Santana, Luckeciano C. Melo, Fernando H. F. Camargo, Bruno Brandão, Anderson Soares, Renan M. Oliveira, Sandor Caetano
+-  In this work, we propose an approach of model selection, interpreted as a multi-armed bandit problem. Our goal is to create a meta-bandit to choose which model to run depending on the current context. 
+- Shifting interest can be context-dependent. 
+- For each interaction the environment provides an observation. The meta-bandit uses it to select on of the recomenders and let the selected one decide the action. The environment receives this action and calculates the reward. 
+<img src = "https://user-images.githubusercontent.com/8243154/96539545-47182c80-12d6-11eb-92d9-f447c097f053.png">
+- Test on private dataset
+- No code available
